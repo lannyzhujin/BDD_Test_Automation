@@ -6,22 +6,22 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description>URL of the Application Under Test (AUT)</description>
-      <initValue>'https://katalon.atlassian.net'</initValue>
+      <initValue>'https://ap15.salesforce.com'</initValue>
       <name>URL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>A valid account used during the test</description>
-      <initValue>'sPiHQ&amp;YEa6ST`de+'</initValue>
+      <initValue>'Pwcwelcome1!'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>The password that has been encrypted used during the test</description>
-      <initValue>'KLAk0b2rAgvA1EV7zgpKiS/uV+5nc48Y'</initValue>
+      <initValue>'+1jo4FTxVU4QdNI2GPQ6Fw=='</initValue>
       <name>encrypted_password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>A valid account used during the test</description>
-      <initValue>'demo@katalon.com'</initValue>
+      <initValue>'lannyzhujin-n93a@force.com'</initValue>
       <name>username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

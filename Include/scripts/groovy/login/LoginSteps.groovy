@@ -11,6 +11,10 @@ import internal.GlobalVariable
 
 
 class LoginSteps {
+	@Given('User login successfully')
+	def User_login_successfully() {
+		WebUI.callTestCase(findTestCase('Web UI Tests/Advance Tests/Pages/Login Page/The Login page is loaded successfully'), [:], FailureHandling.STOP_ON_FAILURE)
+	}
 
 	@Given('The Login page is loaded successfully')
 	def The_Login_page_is_loaded_successfully() {
