@@ -20,13 +20,9 @@ class LoginSteps {
 		WebUI.callTestCase(findTestCase('Test Cases/Web UI Tests/SFDC Tests/Login with username and password'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 
-	@When('User goes to page Opportunities')
-	def User_goes_to_page_Opportunities() {
-		new EnhancedWebUI().clickByXpath('//span[text()="Opportunities"]/../..')
-		WebUI.clickImage(findTestObject("Object Repository/web ui/Test Objects/SFDC/Opportunities Page/New"))
+	@When('User goes to page "(.*)"')
+	def User_goes_to_page(String module) {
+		new EnhancedWebUI().clickByXpath('//span[text()="'+module+'"]/../..')
 	}
 
-	@Then('Opportunity should be succesfully created')
-	def Opportunity_should_be_succesfully_created() {
-	}
 }

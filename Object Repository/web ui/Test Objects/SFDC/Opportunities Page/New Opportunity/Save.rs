@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>New</name>
+   <name>Save</name>
    <tag></tag>
-   <elementGuidId>bcd1e165-3217-4f0b-9052-076e67b6823b</elementGuidId>
-   <imagePath>C:\Users\lzhu061\Katalon Studio\BDD_Test_Automation\Images\SFDC\Opportunities Page\btnNew.PNG</imagePath>
+   <elementGuidId>a5d58133-cf1c-4874-9ceb-6674b22c6eb4</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -12,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[@title=&quot;New&quot;]</value>
+         <value>//div[@class=&quot;DESKTOP uiContainerManager&quot;]//span[text()=&quot;Save&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

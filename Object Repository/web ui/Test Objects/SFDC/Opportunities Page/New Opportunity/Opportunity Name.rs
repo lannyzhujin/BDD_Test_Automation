@@ -10,7 +10,11 @@
          <key>BASIC</key>
          <value></value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class=&quot;DESKTOP uiContainerManager&quot;]//span[text()=&quot;Opportunity Name&quot;]/../..//input</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
 </WebElementEntity>

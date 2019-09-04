@@ -3,17 +3,14 @@ Feature: Opportunities
   
   Background:
     Given User login successfully
-  
-  Scenario Outline: Create Opportunituies Feature
-    Given User goes to page Opportunities
-    #When Image click "Opportunities Page/New"
-    When Image click "Object Repository/web ui/Test Objects/SFDC/Opportunities Page/New"
-    And Image input "Opportunities Page/New Opportunity/Opportunity Name" with text "New Client Apple Inc."
-    And Image input "Opportunities Page/New Opportunity/Close Date" with text "2019-10-11"
-    And Select "Opportunities Page/New Opportunity/Stage" item "Opportunities/New Opportunity/Proposal"
-    And Click "Opportunities Page/New Opportunity/Save Button"
-    Then Opportunity should be succesfully created
-    
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
+   
+  Scenario: Create Opportunituies Feature
+    Given User goes to page "Opportunities"
+    When Click "Opportunities Page/New"
+    And Input "Opportunities Page/New Opportunity/Opportunity Name" with text "New Client Apple Inc."
+    And Input "Opportunities Page/New Opportunity/Account Name" with text "Apple Inc."
+    And Click "Opportunities Page/New Opportunity/Account Name Item"
+    And Input "Opportunities Page/New Opportunity/Close Date" with text "2019-10-11"
+    And Select "Opportunities Page/New Opportunity/Stage" item "Proposal"
+    And Click "Opportunities Page/New Opportunity/Save"
+    Then Verify "New Client Apple Inc." text exists on page.

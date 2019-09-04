@@ -39,4 +39,13 @@ class TestListener {
 	def afterTestcase(TestCaseContext testCaseContext) {
 		//WebUI.closeBrowser();
 	}
+	
+	/**
+	 * Executes after every test suite ends.
+	 * @param testSuiteContext: related information of the executed test suite.
+	 */
+	@AfterTestSuite
+	def sampleAfterTestSuite(TestSuiteContext testSuiteContext) {
+		WebUI.closeBrowser();
+	}
 }

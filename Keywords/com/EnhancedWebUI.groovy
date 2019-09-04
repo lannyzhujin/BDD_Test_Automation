@@ -52,6 +52,16 @@ import com.kms.katalon.core.exception.StepFailedException
 import com.Utility
 
 public class EnhancedWebUI {
+	def static highlightObject(TestObject to){
+		WebElement element = WebUiCommonHelper.findWebElement(to, 30)
+		3.times{
+			WebUI.executeJavaScript("arguments[0].setAttribute('style', 'border: 3px solid orange;');", Arrays.asList(element))
+			sleep(100)
+			WebUI.executeJavaScript("arguments[0].setAttribute('style','border: solid 3px white');", Arrays.asList(element))
+			sleep(100)
+		}
+	}
+
 	def static catchExceptionAndRetry(Closure operations) {
 		int count = 0;
 		int maxTries = 5;
@@ -88,6 +98,7 @@ public class EnhancedWebUI {
 			WebUI.waitForElementPresent(to, timeout)
 			WebUI.waitForElementVisible(to, timeout)
 			WebUI.waitForElementClickable(to, timeout)
+			highlightObject(to)
 			WebUI.click(to)
 		})
 	}
@@ -95,6 +106,7 @@ public class EnhancedWebUI {
 		String webText = catchExceptionAndRetry({
 			//Wait for link exist
 			WebUI.waitForElementPresent(to, timeout)
+			highlightObject(to)
 			String resultText = WebUI.getText(to)
 			return resultText
 		})
@@ -104,6 +116,7 @@ public class EnhancedWebUI {
 		catchExceptionAndRetry({
 			WebUI.waitForElementPresent(to, timeout)
 			WebUI.waitForElementVisible(to, timeout)
+			highlightObject(to)
 			WebUI.setText(to, text)
 		})
 	}
@@ -182,6 +195,20 @@ public class EnhancedWebUI {
 		WebUI.waitForElementPresent(toPageTitle, 30)
 		WebUI.waitForElementVisible(toPageTitle, 30)
 		WebUI.verifyTextPresent(strText, false)
+	}
+	/**
+	 * Wait page exists with page title and verify if page contain text
+	 */
+	@Keyword
+	def static verifyTextExists(String strText) {
+		//Wait for TestObject exist
+		TestObject to = new TestObject("objectName")
+		to.addProperty("xpath", ConditionType.EQUALS, "//*[contains(text(),'" + strText + "')]")
+		//Wait for TestObject exist
+		WebUI.waitForElementPresent(to, 30)
+		WebUI.waitForElementVisible(to, 30)		
+		highlightObject(to)
+		WebUI.verifyElementPresent(to, 30)
 	}
 	/**
 	 * Download Files.
