@@ -6,7 +6,7 @@ Feature: Opportunities
    
   Scenario: Create Opportunituies Feature
     Given User goes to page "Opportunities"
-    When Click "Opportunities Page/New"
+    When Image click "Opportunities Page/New"
     And Input "Opportunities Page/New Opportunity/Opportunity Name" with text "New Client Apple Inc."
     And Input "Opportunities Page/New Opportunity/Account Name" with text "Apple Inc."
     And Click "Opportunities Page/New Opportunity/Account Name Item"

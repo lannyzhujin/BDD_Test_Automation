@@ -4,11 +4,10 @@
    <name>New</name>
    <tag></tag>
    <elementGuidId>bcd1e165-3217-4f0b-9052-076e67b6823b</elementGuidId>
-   <imagePath>C:\Users\lzhu061\Katalon Studio\BDD_Test_Automation\Images\SFDC\Opportunities Page\btnNew.PNG</imagePath>
+   <imagePath>Images/SFDC/Opportunities Page/btnNew.PNG</imagePath>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -16,5 +15,5 @@
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
-   <useRalativeImagePath>false</useRalativeImagePath>
+   <useRalativeImagePath>true</useRalativeImagePath>
 </WebElementEntity>

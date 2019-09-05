@@ -1,6 +1,5 @@
 package com
 
-
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
@@ -206,7 +205,7 @@ public class EnhancedWebUI {
 		to.addProperty("xpath", ConditionType.EQUALS, "//*[contains(text(),'" + strText + "')]")
 		//Wait for TestObject exist
 		WebUI.waitForElementPresent(to, 30)
-		WebUI.waitForElementVisible(to, 30)		
+		WebUI.waitForElementVisible(to, 30)
 		highlightObject(to)
 		WebUI.verifyElementPresent(to, 30)
 	}

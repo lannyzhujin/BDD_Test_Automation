@@ -36,11 +36,11 @@ class WebUIOperation {
 	def Click(String element) {
 		new EnhancedWebUI().protectedClick(findTestObject("Object Repository/web ui/Test Objects/SFDC/"+element))
 	}
-	
+
 	@When('Image click "(.*)"')
 	def Image_click(String element) {
-		WebUI.waitForImagePresent(findTestObject(element), 20)
-		WebUI.clickImage(findTestObject("Object Repository/web ui/Test Objects/SFDC/Opportunities Page/New"))
+		WebUI.waitForImagePresent(findTestObject("Object Repository/web ui/Test Objects/SFDC/"+element), 20)
+		WebUI.clickImage(findTestObject("Object Repository/web ui/Test Objects/SFDC/"+element))
 	}
 
 	@When('Input "(.*)" with text "(.*)"')
@@ -59,7 +59,7 @@ class WebUIOperation {
 		new EnhancedWebUI().protectedClick(findTestObject("Object Repository/web ui/Test Objects/SFDC/"+element))
 		new EnhancedWebUI().clickByXpath("//a[text()='"+itemText+"']")
 	}
-	
+
 	@Then('Verify "(.*)" text exists on page.')
 	def Verify_text_exists_on_page(String text) {
 		new EnhancedWebUI().verifyTextExists(text)

@@ -24,5 +24,4 @@ class LoginSteps {
 	def User_goes_to_page(String module) {
 		new EnhancedWebUI().clickByXpath('//span[text()="'+module+'"]/../..')
 	}
-
 }

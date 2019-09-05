@@ -68,6 +68,12 @@ def static "com.EnhancedWebUI.verifyPageOpened"(
          , 	strText)
 }
 
+def static "com.EnhancedWebUI.verifyTextExists"(
+    	String strText	) {
+    (new com.EnhancedWebUI()).verifyTextExists(
+        	strText)
+}
+
 def static "com.EnhancedWebUI.focusElementByXpath"(
     	String strXpath	
      , 	int timeout	) {

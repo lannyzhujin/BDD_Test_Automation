@@ -15,7 +15,7 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\lzhu061\\AppData\\Local\\Temp\\Katalon\\Include\\features\\BDD Cucumber Tests\\Web UI Tests\\Create Opportunity.feature\\20190904_164516\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\lzhu061\\AppData\\Local\\Temp\\Katalon\\Include\\features\\BDD Cucumber Tests\\Web UI Tests\\Create Opportunity.feature\\20190905_144226\\execution.properties')
 
 TestCaseMain.beforeStart()
 TestCaseMain.runFeatureFile('Include/features/BDD Cucumber Tests/Web UI Tests/Create Opportunity.feature')
